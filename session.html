@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <!-- session.html -->
+  <!-- alpha at 2020-09-26  -->
+  <html lang="en">
+  <head>
+    <title>Network Status</title>
+  </head>
+  <style>
+    .erm { color: lightgrey }
+    .yes { color: black }
+    .off { color: red }
+    .ping_table {
+      font-family: "Lucida Console", Courier, monospace;
+      font-size: 12px;
+    }
+</style>
+  <body>
+    <div id="connect_holder">disconnected</div>
+    <div class="ping_table"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script type="text/javascript">
+      var socket = io.connect('http://' + document.domain + ':' + location.port);
+      socket.on( 'connect', function() {
+          socket.emit( 'data_request' )
+        }
+      )
+      socket.on( 'recieve_data', function( leases ) {
+          console.log( leases )
+          $( '#connect_holder' ).text('Connected')
+          $( 'div.ping_table' ).empty()
+          var x;
+          for ( x in leases ) {
+            $( 'div.ping_table' ).append( '<div class="'+leases[x].state+'" id="ip'+x+'">'+leases[x].ipAddress+ ' - ' +leases[x].hostname+ '</div>' )
+          }
+        }
+      )
+      socket.on( 'update_line', function( lease_record ) {
+          console.log( lease_record )
+          var x;
+          for ( x in lease_record ) {
+            $( '#ip'+x ).attr("class", lease_record[x].state)
+          }
+        }
+      )
+    </script>
+  </body>
+  </html>
