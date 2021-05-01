@@ -11,16 +11,15 @@ The client also uses the export file, pinging each entry in turn and posting the
 # setup
 
 Clone the repo to your docker host
-
-  `git clone https://github.com/sfduff/ip_webpage.git'`
-
+  ```
+  git clone https://github.com/sfduff/ip_webpage.git
+  ```
 Navigate into the new folder `/ip_webpage` and build the containers
-
   ```
   cd ip_webpage
   docker-compose build
   ```
-  
 and launch.
-
-  `docker-compose up -d`
+```
+  docker-compose up -d
+```
