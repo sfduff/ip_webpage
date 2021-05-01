@@ -16,10 +16,10 @@ Clone the repo to your docker host
 
 Navigate into the new folder `/ip_webpage` and build the containers
 
-
-  `cd ip_webpage
-  
-  docker-compose build`
+  ```
+  cd ip_webpage
+  docker-compose build
+  ```
   
 and launch.
 
