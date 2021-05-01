@@ -10,7 +10,7 @@ services:
     ports:
       - "5000:5000"
     #restart: always
-    entrypoint: [ "bash", "-c", "python main.py"]
+    entrypoint: [ "bash", "-c", "python server.py"]
     restart: "no"
 
   client:
