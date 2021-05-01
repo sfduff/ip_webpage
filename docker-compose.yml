@@ -6,7 +6,7 @@ services:
     build: ./server
     hostname: 'server'
     volumes:
-      - /Users/Shared/Docker/python_test/app:/usr/src/app
+      - $PWD/app:/usr/src/app
     ports:
       - "5000:5000"
     #restart: always
@@ -20,7 +20,7 @@ services:
     build: ./client
     hostname: 'client'
     volumes:
-      - /Users/Shared/Docker/python_test/app:/usr/src/app
+      - $PWD/app:/usr/src/app
     ports:
       - "7:7"
       #restart: always
