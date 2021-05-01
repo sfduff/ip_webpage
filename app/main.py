@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # main.py
-# created 26-09-2020
+# alpha at 2020-09-26
 
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO

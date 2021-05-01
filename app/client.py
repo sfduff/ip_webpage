@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # client.py
-# created 26-09-2020
+# alpha at 2020-09-26
 
 from socketIO_client import SocketIO, LoggingNamespace
 from time import sleep
@@ -29,7 +29,7 @@ def monitor():
 
     for lease_record in leases:
         ping_result = ping( leases[ lease_record ][ "ipAddress" ] )
-        #print( leases[ lease_record ][ "ipAddress" ] + ' -> '+ str( ping_result ) )
+        print( leases[ lease_record ][ "ipAddress" ] + ' -> '+ str( ping_result ) ) #rem later
         if str( ping_result ) == "None": #ping failed
             if not leases[ lease_record ][ 'state' ] == 'off':
                 change_state( 'off' )
@@ -39,7 +39,7 @@ def monitor():
 
 
 if __name__ == '__main__':
-    socketIO = SocketIO( '192.168.1.122', 5000 )
+    socketIO = SocketIO( 'server', 5000 )
     socketIO.on( 'recieve_data', recieve_data )
     socketIO.emit( 'data_request' )
     socketIO.wait( seconds = 1 )

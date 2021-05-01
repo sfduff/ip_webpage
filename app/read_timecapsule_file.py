@@ -12,7 +12,7 @@ def leases():
     try:
         plist_file = "Time Capsule.baseconfig"
         with open( plist_file, 'rb' ) as f:
-            plist_data = plistlib.load( f, fmt = None, use_builtin_types = True, dict_type = dict )
+            plist_data = plistlib.load( f, fmt = None, dict_type = dict )
     except IndexError:
         plist_file = '<stdin>'
         plist_data = plistlib.loads( sys.stdin.buffer.read() )
