@@ -1,3 +1,5 @@
+# applescript workflow
+
 activate application "AirPort Utility"
 delay 2
 tell application "System Events"
