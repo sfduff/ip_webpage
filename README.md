@@ -8,7 +8,7 @@ It then uses the file to build a webpage that can be updated by web sockets.
 
 The client also uses the export file, pinging each entry in turn and posting the resolt to the website.
 
-#setup
+# setup
 
 clone the repo to your docker host
 
