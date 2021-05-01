@@ -29,3 +29,7 @@ and launch.
 On a host Apple Mac open the AirPort Utility, and export the configuration file to the repo folder on the docker host.  AirPort will remember the files save location.
 
 Run `router_export.workflow` using Apple Automator to automate the process.
+
+# scheduling the export
+
+/\/\ add method here /\/\
