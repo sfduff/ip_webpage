@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 # read_timecapsule_file.py
-# alpha at 2020-09-26
-
 # read time capsule baseconfig file and return host, ip and mac address
 # details as a list of dictionary items
 
