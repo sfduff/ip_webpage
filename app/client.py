@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # client.py
-# alpha at 2020-09-26
 
 from socketIO_client import SocketIO, LoggingNamespace
 from time import sleep
