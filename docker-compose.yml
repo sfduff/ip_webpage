@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  server:
+    image: ip_webpage/server
+    build: ./server
+    hostname: 'server'
+    volumes:
+      - /Users/Shared/Docker/python_test/app:/usr/src/app
+    ports:
+      - "5000:5000"
+    #restart: always
+    entrypoint: [ "bash", "-c", "python main.py"]
+    restart: "no"
+
+  client:
+    depends_on:
+      - server
+    image: ip_webpage/client
+    build: ./client
+    hostname: 'client'
+    volumes:
+      - /Users/Shared/Docker/python_test/app:/usr/src/app
+    ports:
+      - "7:7"
+      #restart: always
+    entrypoint: [ "bash", "-c", "sleep 10 && python client.py"]
+    restart: "no"
