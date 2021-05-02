@@ -38,4 +38,4 @@ Run `router_export.workflow` using Apple Automator to automate the process.
 - Copy/paste the AppleScript into the Run AppleScript box
 - Save the newly created Calendar Alarm
 - On save it will immediately be added to your calendar
-- Change the schedule and recurrance as desired.
+- Change the schedule and recurrence as desired.
