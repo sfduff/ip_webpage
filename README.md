@@ -32,4 +32,10 @@ Run `router_export.workflow` using Apple Automator to automate the process.
 
 # scheduling the export
 
-/\/\ add method here /\/\
+- In Automator, create a Calendar Alarm
+- Select Utilities from the library pane
+- Select & drag Run AppleScript into the workflow area
+- Copy/paste the AppleScript into the Run AppleScript box
+- Save the newly created Calendar Alarm
+- On save it will immediately be added to your calendar
+- Change the schedule and recurrance as desired.
