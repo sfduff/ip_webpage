@@ -42,5 +42,5 @@ if __name__ == '__main__':
     socketIO.on( 'recieve_data', recieve_data )
     socketIO.emit( 'data_request' )
     socketIO.wait( seconds = 1 )
-    monitor() # replace these with a loop later
-    monitor() # second pass to confirm only updating changes
+    while True:
+        monitor()
