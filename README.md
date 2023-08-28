@@ -6,7 +6,7 @@ The exported `Time Capsule.baseconfig` file is exported into the `/app` folder.
 When the server first loads, it reads the file and creates an export with just the IP registrations.
 It then uses the file to build a webpage that can be updated by web sockets.
 
-The client also uses the export file, pinging each entry in turn and posting the resolt to the website.
+The client also uses the export file, pinging each entry in turn and posting the result to the website.
 
 # setup
 
